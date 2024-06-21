@@ -1,0 +1,42 @@
+/* Limiting width of main */
+main {
+  max-width: 840px;
+  margin: 0 auto; /* Centering main content */
+  padding: 20px; /* Adding padding for spacing */
+}
+
+/* Styling for aside */
+aside {
+  width: 20rem; /* Adjust width as needed */
+  margin: 1rem; /* Adjust margin for spacing */
+  padding: 1rem; /* Adjust padding for spacing inside */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle transparent border */
+  background-color: #eee; /* Background color for aside */
+  color: #333; /* Text color for aside content */
+  text-align: center; /* Align text inside aside */
+}
+
+/* Styling for images inside aside */
+aside img {
+  width: 200px; /* Fixed width for images */
+  height: auto; /* Maintaining aspect ratio */
+}
+
+/* More exclusive selector for main img */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* Removing padding for all paragraphs */
+p {
+  padding: 0;
+}
+
+/* Styling for footer */
+footer {
+  margin-top: 15px; /* Spacing between main content and footer */
+  border-top: 1px solid #000; /* Top border for footer */
+  text-align: center; /* Center align text in footer */
+  padding: 10px; /* Padding inside footer */
+}
