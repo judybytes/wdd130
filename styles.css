@@ -1,76 +1,100 @@
-/* Limiting width of main */
+/* Universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Class Selectors */
+/* Styling for .box class */
+.box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, .1);
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Float profile image to the right and add border */
+main img {
+  width: 150px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  float: right;
+  margin: 0 0 10px 20px; /* Adjust margins for spacing */
+  border: 2px solid #ddd; /* Add border around the profile picture */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Absolute positioning for aside h2 */
+aside {
+  position: relative; /* Ensure positioning context */
+}
+
+aside h2 {
+  position: absolute;
+  top: 20px; /* Adjust top positioning */
+  left: 10px; /* Adjust left positioning */
+}
+
+/* Align South Africa image in the middle */
+aside img {
+  width: 100%; /* Ensure image is responsive within aside */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px; /* Center image horizontally and add margin */
+}
+
+/* Additional styling */
 main {
   max-width: 840px;
-  margin: 0 auto; /* Centering main content */
-  padding: 20px; /* Adding padding for spacing */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Styling for nav */
 nav {
-  background-color: #333; /* Dark background for nav */
-  padding: 10px; /* Padding inside nav */
-  text-align: center; /* Centering nav items */
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Styling for nav links */
 nav a {
-  color: #fff; /* White text for links */
-  text-decoration: none; /* Removing underline from links */
-  margin: 0 10px; /* Spacing between links */
-  font-weight: bold; /* Making links bold */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
 nav a:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: underline;
 }
 
-/* Styling for h1 */
 h1 {
-  font-size: 2em; /* Large font size for h1 */
-  text-align: center; /* Centering h1 text */
-  margin-bottom: 20px; /* Spacing below h1 */
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Styling for aside */
 aside {
-  width: 20rem; /* Adjust width as needed */
-  margin: 1rem auto; /* Adjust margin for spacing, centered */
-  padding: 1rem; /* Adjust padding for spacing inside */
-  border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle transparent border */
-  background-color: #eee; /* Background color for aside */
-  color: #333; /* Text color for aside content */
-  text-align: center; /* Align text inside aside */
+  width: 20rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #eee;
+  color: #333;
+  text-align: center;
 }
 
-/* Styling for images inside aside */
-aside img {
-  width: 200px; /* Fixed width for images */
-  height: auto; /* Maintaining aspect ratio */
-  display: block; /* Make image a block element */
-  margin: 0 auto 10px; /* Center image and add margin below */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
 }
 
-/* More exclusive selector for main img */
-main img {
-  width: 150px;
-  height: auto;
-  display: block; /* Make image a block element */
-  margin: 0 auto; /* Center the image */
-}
-
-/* Removing padding for all paragraphs */
 p {
   padding: 0;
-  line-height: 1.5; /* Improving readability with line height */
-}
-
-/* Styling for footer */
-footer {
-  margin-top: 15px; /* Spacing between main content and footer */
-  border-top: 1px solid #000; /* Top border for footer */
-  text-align: center; /* Center align text in footer */
-  padding: 10px; /* Padding inside footer */
-  background-color: #333; /* Dark background for footer */
-  color: #fff; /* White text for footer */
+  line-height: 1.5;
 }
 
