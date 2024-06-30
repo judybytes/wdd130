@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #ffd700;
+    --font-color: #333;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--font-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.5em;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+}
+
+.hero article img.happy-client {
+    float: right;
+    margin: 0 1em;
+    width: 100px; /* Adjust the width as needed */
+}
+
+footer {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 1em;
+}
+
+.sociallinks a img {
+    width: 30px;
+    margin: 0 0.5em;
+}
+
+
