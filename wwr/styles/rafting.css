@@ -13,12 +13,23 @@ body {
     color: var(--font-color);
 }
 
-header {
+header.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
     background-color: var(--primary-color);
     color: white;
-    display: flex;
-    justify-content: space-between;
     padding: 1em;
+}
+
+header .logo {
+    width: 50px;
+    height: auto;
+}
+
+nav.nav-flex {
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -62,15 +73,43 @@ nav a {
     width: 100px; /* Adjust the width as needed */
 }
 
+.history {
+    padding: 1em;
+}
+
+.adventures {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.adventures figure {
+    margin: 1em;
+}
+
+.adventures figcaption {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
 footer {
     background-color: var(--secondary-color);
     text-align: center;
     padding: 1em;
 }
 
-.sociallinks a img {
-    width: 30px;
+footer .sociallinks {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .sociallinks a {
     margin: 0 0.5em;
+}
+
+footer .sociallinks img {
+    width: 30px;
 }
 
 .css-validator {
@@ -78,5 +117,3 @@ footer {
     width: 88px;
     height: 31px;
 }
-
-/* styles for about us page */
