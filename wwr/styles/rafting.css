@@ -1,3 +1,4 @@
+/* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;700&display=swap');
 
 :root {
@@ -14,30 +15,57 @@ body {
 }
 
 header.header-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1em;
-}
-
-header .logo {
-    width: 50px;
-    height: auto;
-}
-
-nav.nav-flex {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
 }
 
-nav a {
+.logo {
+    height: 50px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.nav-flex a {
     color: white;
     text-decoration: none;
-    margin: 0 1em;
+    margin: 0 10px;
 }
 
+.nav-flex a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p, .sociallinks {
+    margin: 5px 0;
+}
+
+.sociallinks a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.sociallinks img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Page-Specific Styles */
+
+/* Styles for about.html */
 .hero {
     position: relative;
     text-align: center;
@@ -93,27 +121,86 @@ nav a {
     margin-top: 0.5em;
 }
 
-footer {
-    background-color: var(--secondary-color);
-    text-align: center;
-    padding: 1em;
+/* Styles for contact.html */
+.contact-info, .employee-profiles, .contact-form {
+    margin-bottom: 20px;
 }
 
-footer .sociallinks {
-    display: flex;
-    justify-content: flex-end;
+.contact-info h2, .employee-profiles h2, .contact-form h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
 }
 
-footer .sociallinks a {
-    margin: 0 0.5em;
-}
-
-footer .sociallinks img {
-    width: 30px;
-}
-
-.css-validator {
+.contact-info iframe {
+    width: 100%;
+    height: 300px;
     border: 0;
-    width: 88px;
-    height: 31px;
+}
+
+.employee {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.employee img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.contact-form label {
+    width: 30%;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .form-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .form-options div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
 }
