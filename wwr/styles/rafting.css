@@ -53,9 +53,13 @@ footer p, .sociallinks {
     margin: 5px 0;
 }
 
+.sociallinks {
+    display: flex;
+    justify-content: center;
+}
+
 .sociallinks a {
-    margin: 0 10px;
-    display: inline-block;
+    margin: 0 5px;
 }
 
 .sociallinks img {
@@ -131,7 +135,7 @@ footer p, .sociallinks {
     padding-bottom: 5px;
 }
 
-.contact-info iframe {
+.contact-info .google-map {
     width: 100%;
     height: 300px;
     border: 0;
