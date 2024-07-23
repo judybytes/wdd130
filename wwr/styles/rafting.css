@@ -5,6 +5,13 @@
     --primary-color: #0056b3;
     --secondary-color: #ffd700;
     --font-color: #333;
+    --header-bg: #004080; /* Dark Blue */
+    --footer-bg: #004080; /* Dark Blue */
+    --nav-bg: #0056b3; /* Blue */
+    --nav-hover-bg: #003d7a; /* Darker Blue */
+    --button-bg: #0056b3; /* Blue */
+    --button-hover-bg: #003d7a; /* Darker Blue */
+    --border-color: #ccc;
 }
 
 body {
@@ -12,12 +19,13 @@ body {
     margin: 0;
     padding: 0;
     color: var(--font-color);
+    background-color: #f4f4f4; /* Light Gray Background */
 }
 
 header.header-grid {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: var(--header-bg);
     color: white;
     padding: 10px;
 }
@@ -30,20 +38,26 @@ header.header-grid {
     display: flex;
     justify-content: space-around;
     flex-grow: 1;
+    background-color: var(--nav-bg);
+    border-radius: 5px;
 }
 
 .nav-flex a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    padding: 10px;
+    display: block;
 }
 
 .nav-flex a:hover {
-    text-decoration: underline;
+    background-color: var(--nav-hover-bg);
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--footer-bg);
     color: white;
     text-align: center;
     padding: 10px;
@@ -59,7 +73,7 @@ footer p, .sociallinks {
 }
 
 .sociallinks a {
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .sociallinks img {
@@ -69,7 +83,7 @@ footer p, .sociallinks {
 
 /* Page-Specific Styles */
 
-/* Styles for about.html */
+/* Styles for home page (index.html) */
 .hero {
     position: relative;
     text-align: center;
@@ -78,7 +92,8 @@ footer p, .sociallinks {
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 60vh; /* Adjusted height */
+    object-fit: cover; /* Ensure image fits within the area */
 }
 
 .hero h1 {
@@ -91,47 +106,155 @@ footer p, .sociallinks {
     padding: 0.5em;
 }
 
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+}
+
+.highlight {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure image covers the area */
+    max-height: 200px; /* Adjusted height */
+}
+
+.highlight p {
+    padding: 1em;
+    background-color: white;
+    color: var(--font-color);
+    text-align: center;
+}
+
+/* Styles for about.html */
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Ensure image doesn't grow too large */
+    object-fit: cover; /* Ensure image covers the area */
+}
+
 .hero article {
     position: absolute;
     bottom: 0;
     right: 0;
     background: rgba(255, 255, 255, 0.8);
     padding: 1em;
+    border-radius: 5px;
 }
 
 .hero article img.happy-client {
     float: right;
     margin: 0 1em;
-    width: 100px; /* Adjust the width as needed */
+    width: 100px;
+}
+
+.history, .adventures {
+    padding: 2em;
 }
 
 .history {
-    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 
 .adventures {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 1em;
+    gap: 1em;
 }
 
 .adventures figure {
     margin: 1em;
+    width: 100%;
+    max-width: 300px; /* Adjust max-width for responsiveness */
+    border-radius: 5px;
+    overflow: hidden; /* Hide any overflow for clean edges */
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure image covers the area */
+    max-height: 200px; /* Ensure consistent height */
 }
 
 .adventures figcaption {
     text-align: center;
     margin-top: 0.5em;
+    color: var(--font-color);
 }
 
+/* Styles for trips.html */
+.trip-list {
+    padding: 2em;
+}
+
+.trip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.trip img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Consistent width */
+    object-fit: cover; /* Ensure image covers the area */
+    max-height: 200px; /* Consistent height */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.trip-info {
+    max-width: 300px;
+    margin: 1em;
+    text-align: center;
+}
+
+.trip-info h3 {
+    margin: 0.5em 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+}
 /* Styles for contact.html */
 .contact-info, .employee-profiles, .contact-form {
     margin-bottom: 20px;
+    padding: 1em;
+    background: white;
+    border-radius: 5px;
 }
 
 .contact-info h2, .employee-profiles h2, .contact-form h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 5px;
 }
 
@@ -141,25 +264,41 @@ footer p, .sociallinks {
     border: 0;
 }
 
+.employee-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
 .employee {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     margin: 10px;
+    width: 150px; /* Adjust width as needed */
 }
 
 .employee img {
-    width: 150px;
-    height: 150px;
+    width: 100%; /* Adjust width to fit container */
+    height: auto;
     border-radius: 50%;
+    max-width: 150px; /* Ensure images don't grow too large */
+}
+
+.employee p {
+    margin: 0.5em 0;
+    color: var(--font-color);
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #fff;
 }
 
 .contact-form .form-row {
@@ -178,7 +317,7 @@ footer p, .sociallinks {
 .contact-form input, .contact-form textarea, .contact-form button {
     width: 65%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
@@ -198,7 +337,7 @@ footer p, .sociallinks {
 }
 
 .contact-form button {
-    background-color: #333;
+    background-color: var(--button-bg);
     color: white;
     border: none;
     padding: 10px;
@@ -206,5 +345,8 @@ footer p, .sociallinks {
 }
 
 .contact-form button:hover {
-    background-color: #555;
+    background-color: var(--button-hover-bg);
 }
+
+
+
